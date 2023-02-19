@@ -1,6 +1,8 @@
 # ChangeYourWalls
 Do you want to paint the walls or re-glue them altogether? But you're not quite sure they'll match the surroundings? This program allows to change the walls by the given pattern. This program aims to help with your interior update. 
 
+# Requirements:
+* CUDA 9.2+
 # How to use
 * upload a pattern into `demo/patterns` dir
 * upload your interior image into `demo/source` dir
@@ -11,7 +13,7 @@ Do you want to paint the walls or re-glue them altogether? But you're not quite 
 
 You can either select rectangle wall parts one-by-one or just select the bounding four corners to apply the pattern. 
 
-Just play with it!
+See `*.py --help` to see additional info. Just play with it!
 
 ![alt text](demo/results/5.jpg)
 

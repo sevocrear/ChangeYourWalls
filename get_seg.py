@@ -21,6 +21,7 @@ def make_parser():
     parser.add_argument('--config', type=str, default='models/pspnet_r101-d8_480x480_80k_pascal_context_59.py', help='model\'s config')
     parser.add_argument('--chkpt', type=str, default='models/pspnet_r101-d8_480x480_80k_pascal_context_59_20210416_114418-fa6caaa2.pth', help='model\'s checkpoint')
     parser.add_argument('--output', type=str, default='demo/mask/test.png', help='mask path')
+    parser.add_argument('--device', type=str, default='cpu', help='device to run model on (cpu, cuda)')
     return parser
 
 if __name__ == '__main__':
@@ -37,7 +38,7 @@ if __name__ == '__main__':
             id_select = idx-1
     if id_select:
         # build the model from a config file and a checkpoint file
-        model = init_segmentor(config_file, checkpoint_file, device='cuda:0')
+        model = init_segmentor(config_file, checkpoint_file, device=opt.device)
 
         # test a single image and show the results
         result = inference_segmentor(model, img)
