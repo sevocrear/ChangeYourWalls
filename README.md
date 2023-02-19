@@ -42,7 +42,7 @@ python3 get_seg.py --image demo/source/test.png --output demo/mask/test.png --ob
 ```
 python3 main.py --image demo/source/test.png --mask demo/mask/test.png --pattern demo/patterns/texture_1.jpg 
 ```
-results are saved in `demo/results` dir
+After you finish, just hit any botton. Results are saved in `demo/results` dir
 
 # TODO:
 * create tg bot @nikultimo
