@@ -33,21 +33,23 @@ docker run --rm -it --gpus all --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp
 mim download mmsegmentation --config pspnet_r101-d8_480x480_80k_pascal_context_59 --dest models/
 ```
 
-## Get the mask
+## Get the mask of the interior (to mask selected objects (ex., a wall))
 ```
-python3 get_seg.py --obj_class wall
+python3 get_seg.py --image demo/source/test.png --output demo/mask/test.png --obj_class wall --device cuda
 ```
 
 ## get the pattern
 ```
-python3 main.py
+python3 main.py --image demo/source/test.png --mask demo/mask/test.png --pattern demo/patterns/texture_1.jpg 
 ```
 results are saved in `demo/results` dir
 
 # TODO:
 * create tg bot @nikultimo
 * automate corners selection
-* play with various models
+* play with various models. Improve the mask accuracy
+* Add online pattern change wrt selected corners
+* add weighted sum coefficients adjusting
 
 
 # References

@@ -29,10 +29,12 @@ class PatternApply():
         
         result *= self.seg_png # pick only parts covering the selected class id (ex., bed, walls)
         img[result != 0] = img[result != 0]*0.2 + result[result != 0]*0.8
+        self.img_ = img
+        
+    def save_img(self,):
         imgs = glob(os.path.join(self.output_path, "*.png")) + glob(os.path.join(self.output_path, "*.jpg"))
         cv2.imwrite(os.path.join(self.output_path, f"{len(imgs)}.png"), img)
-        self.img_ = img
-
+        
     def getImg(self):
         return self.img_
     
@@ -74,11 +76,15 @@ if __name__=="__main__":
   
     # displaying the image
     cv2.imshow('image', img)
-  
+    
     # setting mouse handler for the image
     # and calling the click_event() function
     cv2.setMouseCallback('image', click_event)
     # wait for a key to be pressed to exit
     cv2.waitKey(0)
+    
+    # Save final img
+    pattern.save_img()
+    
     # close the window
     cv2.destroyAllWindows()
