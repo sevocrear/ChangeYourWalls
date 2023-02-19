@@ -29,3 +29,8 @@ python3 get_seg.py --obj_class wall
 python3 main.py
 ```
 results are saved in `demo/results` dir
+
+# TODO:
+* create tg bot @nikultimo
+* automate corners selection
+* play with various models
