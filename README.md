@@ -15,7 +15,7 @@ You can either select rectangle wall parts one-by-one or just select the boundin
 
 See `*.py --help` to see additional info. Just play with it!
 
-![alt text](demo/results/5.jpg)
+<img src = "demo/source/test.png" width ="300" /><img src = "demo/results/3.jpg" width ="300" /> <img src = "demo/results/5.png" width ="300" />
 
 # Build a docker
 ```
