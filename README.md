@@ -1,6 +1,7 @@
 # ChangeYourWalls
 Allows to change the walls by the given pattern. This program aims to help with your interior update
 
+![alt text](demo/results/5.jpg)
 
 # Build a docker
 ```
