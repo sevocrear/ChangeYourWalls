@@ -46,3 +46,7 @@ results are saved in `demo/results` dir
 * create tg bot @nikultimo
 * automate corners selection
 * play with various models
+
+
+# References
+* [MMSegmentation](https://github.com/open-mmlab/mmsegmentation)
